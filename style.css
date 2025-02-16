@@ -1,22 +1,47 @@
-@charset "utf-8";
-
-/* 여백 초기화 */
-* {
-    margin:0; 
-    padding:0;
-    box-sizing: border-box;
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
 }
 
-/* a 링크 초기화 */
-a {
-    color: inherit; 
-    text-decoration: inherit;
-}
-a:hover {
-    color: #2698cb;
-}
-
-/* 폰트 초기화 */
 body, input, textarea, select, button, table {
     font-family: "Noto Sans", serif;
     color: #222; 
@@ -25,28 +50,22 @@ body, input, textarea, select, button, table {
     line-height: 1.5;
 }
 
-
 /* 폰트 스타일 초기화 (기울임) */
 em, address {
     font-style: normal;
 }
 
-/* 블릿기호 초기화 */
-ul, li, ol {
-    list-style: none;
-}
-
-/* 제목 태그 초기화 */
-h1, h2, h3, h4, h5, h6 {
-    font-size: inherit; font-weight: inherit;
-}
-
-/* 버튼 초기화 */
-button {
-    border: none;
-}
-
 /* 반응형 */
-video,img {
+video, img {
     width: 100%;
+    object-fit: cover;
+}
+
+/* 여기부터 시작 */
+header .logo {
+    height: 100px;
+}
+
+header {
+    height: 100px;
 }
