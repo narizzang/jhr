@@ -64,6 +64,24 @@ header .logo img {
 	object-fit: cover;
 }
 
+section.gallery {
+	padding: 30px;
+}
+
+.gallery .gallery-inner {
+	display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.gallery .gallery-inner .work {
+	display: flex;
+    flex-direction: column;
+    width: calc(33.3% - 10px);
+}
+
 @media (max-width: 1024px) {
 	header {
 		height: 25vh;
