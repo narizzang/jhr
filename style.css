@@ -48,11 +48,15 @@ video, img {
 /* 여기부터 시작 */
 
 header {
+	width: 100vw;
 	height: 30vh;
     display: flex;
     justify-content: center;
     align-items: center;
 	background-color: #e6e6e6;
+	position: fixed;
+	top: 0;
+	left: 0;
 }
 
 header .logo {
@@ -64,7 +68,11 @@ header .logo img {
 	object-fit: cover;
 }
 
-section.gallery {
+main {
+	margin-top: 30vh;
+}
+
+section {
 	padding: 30px;
 }
 
@@ -90,6 +98,22 @@ section.gallery {
 	header .logo {
 		width: 60vw;
 	}
+
+	main {
+		margin-top: 25vh;
+	}
+
+	section {
+		padding: 20px;
+	}
+
+	.gallery .gallery-inner {
+		gap: 10px;
+	}
+
+	.gallery .gallery-inner .work {
+		width: calc(50% - 5px);
+	}
 }
 
 @media (max-width: 600px) {
@@ -99,5 +123,21 @@ section.gallery {
 
 	header .logo {
 		width: 80vw;
+	}
+
+	main {
+		margin-top: 20vh;
+	}
+
+	section {
+		padding: 10px;
+	}
+
+	.gallery .gallery-inner {
+		gap: 0;
+	}
+
+	.gallery .gallery-inner .work {
+		width: 100%;
 	}
 }
