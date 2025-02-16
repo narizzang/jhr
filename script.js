@@ -1,28 +1,16 @@
+const projectsData = {
+    "project-1": ["hye-1.jpg", "hye-2.jpg", "hye-3.jpg", "hye-4.jpg", "hye-5.jpg", "hye-6.jpg", "hye-7.jpg"],
+    "project-2": ["eternal.jpg"],
+    "project-3": ["moonlight-1.jpg", "moonlight-2.jpg", "moonlight-3.jpg"]
+};
+
 document.addEventListener("DOMContentLoaded", function () {
-    // 모든 .work 요소에 클릭 이벤트 추가
+    const project1 = this.querySelector("#project1");
+    const content = this.querySelector(".content");
+
     document.querySelectorAll(".work").forEach(work => {
       work.addEventListener("click", function () {
-        const img = this.querySelector("img");
-  
-        // 애니메이션 효과 적용하여 width 100%로 확대
-        img.style.transition = "width 0.5s ease-in-out";
-        img.style.width = "100%";
-  
-        // 새 section이 이미 추가된 경우 중복 추가 방지
-        if (document.getElementById("extra-section")) {
-          return;
-        }
-  
-        // 새로운 section 추가
-        fetch("detail.html")  // extra.html에서 데이터 가져오기
-          .then(response => response.text())
-          .then(data => {
-            const newSection = document.createElement("section");
-            newSection.id = "extra-section";
-            newSection.innerHTML = data;
-            document.body.appendChild(newSection);  // body 맨 끝에 추가
-          })
-          .catch(error => console.error("Error loading extra.html:", error));
+        content.style.display = "block";
       });
     });
   });

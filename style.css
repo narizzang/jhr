@@ -49,18 +49,19 @@ video, img {
 
 header {
 	width: 100vw;
-	height: 30vh;
+	height: 150px;
     display: flex;
     justify-content: center;
     align-items: center;
-	background-color: #e6e6e6;
 	position: fixed;
 	top: 0;
 	left: 0;
+	background-color: #fff;
 }
 
 header .logo {
-    width: 40vw;
+    width: 30vw;
+	margin-top: 15px;
 }
 
 header .logo img {
@@ -69,11 +70,11 @@ header .logo img {
 }
 
 main {
-	margin-top: 30vh;
+	margin-top: 150px;
 }
 
-section {
-	padding: 30px;
+section.gallery {
+	padding: 0 30px;
 }
 
 .gallery .gallery-inner {
@@ -88,23 +89,33 @@ section {
 	display: flex;
     flex-direction: column;
     width: calc(33.3% - 10px);
+	/* transition: width 0.5s ease-in-out; */
+}
+
+section.content {
+	display: none;
+}
+
+section.content .content-inner {
+	padding: 30px;
 }
 
 @media (max-width: 1024px) {
 	header {
-		height: 25vh;
+		height: 100px;
 	}
 
 	header .logo {
-		width: 60vw;
+		width: 40vw;
+		margin-top: 10px;
 	}
 
 	main {
-		margin-top: 25vh;
+		margin-top: 100px;
 	}
 
-	section {
-		padding: 20px;
+	section.gallery {
+		padding: 0 20px;
 	}
 
 	.gallery .gallery-inner {
@@ -118,19 +129,19 @@ section {
 
 @media (max-width: 600px) {
 	header {
-		height: 20vh;
+		height: 50px;
 	}
 
 	header .logo {
-		width: 80vw;
+		width: 50vw;
 	}
 
 	main {
-		margin-top: 20vh;
+		margin-top: 50px;
 	}
 
-	section {
-		padding: 10px;
+	section.gallery {
+		padding: 0 10px;
 	}
 
 	.gallery .gallery-inner {
