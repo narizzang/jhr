@@ -92,7 +92,7 @@ section.gallery {
 	/* transition: width 0.5s ease-in-out; */
 }
 
-section.content {
+section.content .content-inner{
 	display: none;
 }
 
