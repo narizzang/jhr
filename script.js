@@ -7,12 +7,12 @@ const projectsData = {
     "yjg": ["yjg-1.jpg", "yjg-2.jpg", "yjg-3.jpg", "yjg-4.jpg", "yjg-5.jpg", "yjg-6.jpg", "yjg-7.jpg", "yjg-8.jpg"]
 };
 const detailData = {
-    "hye": ["프로젝트1 제목", "프로젝트1 내용을 입력하세요. 프로젝트1 내용을 입력하세요. 프로젝트 1내용을 입력하세요."],
-    "eternal": [],
-    "moonlight": [],
-    "postcard": [],
-    "visang": [],
-    "yjg": []
+    "hye": ["프로젝트1 제목", "프로젝트1 내용을 입력하세요. 프로젝트1 내용을 입력하세요. 프로젝트 1내용을 입력하세요. 프로젝트 1내용을 입력하세요."],
+    "eternal": ["프로젝트2 제목", "프로젝트2 내용을 입력하세요."],
+    "moonlight": ["프로젝트3 제목", "프로젝트3 내용을 입력하세요."],
+    "postcard": ["4 wpahr", "4 sodyddmf dlqfurgktpdy"],
+    "visang": ["5 wpahr", "5 sodyd dlqfur"],
+    "yjg": ["6 title", "6 detail input go go"]
 };
 
 
@@ -31,13 +31,17 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
+    logo.addEventListener("click", function() {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+
     document.querySelectorAll(".work").forEach(work => {
       work.addEventListener("click", function () {
         const projectId = this.id;
         if (projectsData[projectId]) {
             contentTitle.innerHTML = "";
             contentDetail.innerHTML = "";
-            
+
             var tmp = 0;
             detailData[projectId].forEach(des => {
                 const projectDescription = document.createElement("div");

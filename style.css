@@ -70,6 +70,10 @@ header .logo {
 	transition: width 0.5s ease-in-out;
 }
 
+header .logo:hover {
+	cursor: pointer;
+}
+
 header.shrink .logo {
 	width: 15vw;
 }
@@ -102,6 +106,10 @@ section.gallery {
 	/* transition: width 0.5s ease-in-out; */
 }
 
+.gallery .gallery-inner .work:hover {
+	cursor: pointer;
+}
+
 section.content{
 	display: none;
 }
@@ -112,28 +120,29 @@ section.content .content-inner {
 
 .content .content-title {
 	margin-top: 50px;
-	height: 150px;
+	height: 120px;
 }
 
 .content .content-title .project-description {
 	display: inline-block;
+	vertical-align: top;
 	width: calc(50% - 5px);
 }
 
 .content .content-title .project-description .project.left {
 	font-family: "Noto Sans KR, serif";
-	font-weight: 500;
+	font-weight: 600;
 	font-style: normal;
 	font-size: 30pt;
 	padding-left: 10px;
-	line-height: 150px;
+	line-height: 30pt;
 }
 
 .content .content-title .project-description .project.right {
 	font-family: "Noto Sans KR, serif";
 	font-weight: 200;
 	font-style: normal;
-	font-size: 16pt;
+	font-size: 15pt;
 	padding-right: 10px;
 	word-wrap: break-word;
 }
@@ -141,6 +150,10 @@ section.content .content-inner {
 @media (max-width: 1024px) {
 	header {
 		height: 100px;
+	}
+
+	header.shrink {
+		height: 60px;
 	}
 
 	header .logo {
@@ -172,11 +185,19 @@ section.content .content-inner {
 
 @media (max-width: 600px) {
 	header {
-		height: 60px;
+		height: 80px;
+	}
+
+	header.shrink {
+		height: 50px;
 	}
 
 	header .logo {
 		width: 50vw;
+	}
+
+	header.shrink .logo {
+		width: 30vw;
 	}
 
 	main {
@@ -195,8 +216,24 @@ section.content .content-inner {
 		width: 100%;
 	}
 
+	.content .content-title {
+		height: 150px;
+	}
+
 	.content .content-title .project-description {
 		display: block;
 		width: 100%;
+	}
+
+	.content .content-title .project-description .project.left {
+		padding: 0;
+		margin-top: 10px;
+		font-size: 24pt;
+	}
+
+	.content .content-title .project-description .project.right {
+		padding: 0;
+		margin-top: 20px;
+		font-size: 14pt;
 	}
 }
