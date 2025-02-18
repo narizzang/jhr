@@ -41,6 +41,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (projectsData[projectId]) {
             contentTitle.innerHTML = "";
             contentDetail.innerHTML = "";
+            contentDetail.style.display = "block";
 
             var tmp = 0;
             detailData[projectId].forEach(des => {

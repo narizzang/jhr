@@ -147,6 +147,10 @@ section.content .content-inner {
 	word-wrap: break-word;
 }
 
+.content .content-detail {
+	display: none;
+}
+
 @media (max-width: 1024px) {
 	header {
 		height: 100px;
