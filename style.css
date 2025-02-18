@@ -147,6 +147,15 @@ section.content .content-inner {
 	word-wrap: break-word;
 }
 
+footer .copyright {
+	font-family: "Noto Sans", serif;
+	font-weight: 200;
+	font-size: 9pt;
+	color: gray;
+	text-align: center;
+	margin: 10px;
+}
+
 @media (max-width: 1024px) {
 	header {
 		height: 100px;
