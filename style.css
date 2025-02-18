@@ -59,9 +59,19 @@ header {
 	background-color: #fff;
 }
 
+header.shrink {
+	height: 75px;
+	transition: height 0.5s ease-in-out;
+}
+
 header .logo {
     width: 30vw;
 	margin-top: 15px;
+	transition: width 0.5s ease-in-out;
+}
+
+header.shrink .logo {
+	width: 15vw;
 }
 
 header .logo img {
@@ -92,12 +102,40 @@ section.gallery {
 	/* transition: width 0.5s ease-in-out; */
 }
 
-section.content .content-inner{
+section.content{
 	display: none;
 }
 
 section.content .content-inner {
 	padding: 30px;
+}
+
+.content .content-title {
+	margin-top: 50px;
+	height: 150px;
+}
+
+.content .content-title .project-description {
+	display: inline-block;
+	width: calc(50% - 5px);
+}
+
+.content .content-title .project-description .project.left {
+	font-family: "Noto Sans KR, serif";
+	font-weight: 500;
+	font-style: normal;
+	font-size: 30pt;
+	padding-left: 10px;
+	line-height: 150px;
+}
+
+.content .content-title .project-description .project.right {
+	font-family: "Noto Sans KR, serif";
+	font-weight: 200;
+	font-style: normal;
+	font-size: 16pt;
+	padding-right: 10px;
+	word-wrap: break-word;
 }
 
 @media (max-width: 1024px) {
@@ -118,6 +156,11 @@ section.content .content-inner {
 		padding: 0 20px;
 	}
 
+	section.content .content-inner {
+		padding: 20px;
+	}
+	
+
 	.gallery .gallery-inner {
 		gap: 10px;
 	}
@@ -129,7 +172,7 @@ section.content .content-inner {
 
 @media (max-width: 600px) {
 	header {
-		height: 50px;
+		height: 60px;
 	}
 
 	header .logo {
@@ -137,18 +180,23 @@ section.content .content-inner {
 	}
 
 	main {
-		margin-top: 50px;
+		margin-top: 60px;
 	}
 
 	section.gallery {
 		padding: 0 10px;
 	}
 
-	.gallery .gallery-inner {
-		gap: 0;
+	section.content .content-inner {
+		padding: 10px;
 	}
 
 	.gallery .gallery-inner .work {
+		width: 100%;
+	}
+
+	.content .content-title .project-description {
+		display: block;
 		width: 100%;
 	}
 }
